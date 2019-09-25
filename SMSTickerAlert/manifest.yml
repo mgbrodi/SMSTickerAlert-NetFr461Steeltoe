@@ -1,0 +1,11 @@
+﻿---
+applications:
+- name: SMSTickerAlertSteeltoe
+  random-route: true
+  memory: 2G
+  stack: windows
+  buildpacks:
+   - hwc_buildpack
+  services:
+   - TickerSQLConnection
+

@@ -1,0 +1,13 @@
+﻿---
+applications:
+- name: TickerUpdaterSteeltoe
+  memory: 2G
+  stack: windows
+  buildpacks:
+   - binary_buildpack
+  health-check-type: process
+  no-route: true
+  services:
+   - TickerSQLConnection
+   - myConfigServer
+   - Twilio
