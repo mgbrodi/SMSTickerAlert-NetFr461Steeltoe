@@ -20,7 +20,7 @@ using System.Web;
 
 namespace ModelsCommons.Model
 {
-    public class TickerDatabaseInit : DropCreateDatabaseIfModelChanges<TickerContext>
+    public class TickerDatabaseInit : DropCreateDatabaseAlways<TickerContext>
     {
         protected override void Seed(TickerContext context)
         {
