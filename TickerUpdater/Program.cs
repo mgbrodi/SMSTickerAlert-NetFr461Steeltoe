@@ -29,7 +29,7 @@ namespace TickerUpdater
             {
                 AppConfig.RegisterConfig("");
                 _db = new TickerContext(AppConfig.TickerSqlConnection.ConnectionString);
-               
+                Database.SetInitializer(new TickerDatabaseInit());
                 MainLoop();
             }
         }
